@@ -1,7 +1,7 @@
 name: adaptive_display
-description: "A new Flutter package project."
+description: "A wrapper around BoxConstraints to make it more controlled, less indentable and reusable."
 version: 0.0.1
-homepage:
+homepage: https://github.com/Dacyz/adaptive_display
 
 environment:
   sdk: '>=3.4.3 <4.0.0'

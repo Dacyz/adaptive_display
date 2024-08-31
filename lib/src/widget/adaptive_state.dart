@@ -1,35 +1,31 @@
-import 'package:adaptive_display/core/adaptive.dart';
-import 'package:adaptive_display/src/widget/adaptive_element.dart';
-import 'package:flutter/widgets.dart';
+part of '../adaptive_stateful_widget.dart';
 
-abstract class AdaptiveWrapWidget extends Widget {
-  /// Initializes [key] for subclasses.
-  const AdaptiveWrapWidget({super.key});
-
-  @override
-  AdaptiveWrapElement createElement() => AdaptiveWrapElement(this);
-
+@optionalTypeArgs
+abstract class AdaptiveWrapState<T extends StatefulWidget> extends State<T> {
   /// By making the build method capable of wrapping the adaptive logic,
   /// the xs method becomes mandatory and is the first method to be called.
+  @protected
+  @override
   Widget build(BuildContext context) => adaptive;
 
   /// Evaluates the widget based on the [BoxConstraints].
   ///
   /// Returns the widget that matches the current [BoxConstraints]
   /// (Extra Small, Small, Medium, Large, Extra Large, or XXL).
+  @widgetFactory
   Widget _match(BuildContext context, BoxConstraints constraints) {
     if (constraints.isXS) {
-      return xs(context, constraints);
+      return xs(context);
     } else if (constraints.isSM) {
-      return sm(context, constraints);
+      return sm(context);
     } else if (constraints.isMD) {
-      return md(context, constraints);
+      return md(context);
     } else if (constraints.isLG) {
-      return lg(context, constraints);
+      return lg(context);
     } else if (constraints.isXL) {
-      return xl(context, constraints);
+      return xl(context);
     } else {
-      return xxl(context, constraints);
+      return xxl(context);
     }
   }
 
@@ -38,37 +34,32 @@ abstract class AdaptiveWrapWidget extends Widget {
   /// The xs method is the first one to be called, and it is the default
   /// method that is used when the screen size is XS.
   ///
-  /// Default widget build of [AdaptiveWrapWidget]
+  /// Default widget build of [AdaptiveWrapState]
   @protected
-  Widget xs(BuildContext context, BoxConstraints constraints);
+  Widget xs(BuildContext context);
 
   /// The sm method is called when the screen size is SM or larger.
   /// By default, it calls the xs method.
   @protected
-  Widget sm(BuildContext context, BoxConstraints constraints) =>
-      xs(context, constraints);
+  Widget sm(BuildContext context) => xs(context);
 
   /// The md method is called when the screen size is MD or larger.
   /// By default, it calls the sm method.
   @protected
-  Widget md(BuildContext context, BoxConstraints constraints) =>
-      sm(context, constraints);
+  Widget md(BuildContext context) => sm(context);
 
   /// The lg method is called when the screen size is LG or larger.
   /// By default, it calls the md method.
   @protected
-  Widget lg(BuildContext context, BoxConstraints constraints) =>
-      md(context, constraints);
+  Widget lg(BuildContext context) => md(context);
 
   /// The xl method is called when the screen size is XL or larger.
   /// By default, it calls the lg method.
   @protected
-  Widget xl(BuildContext context, BoxConstraints constraints) =>
-      lg(context, constraints);
+  Widget xl(BuildContext context) => lg(context);
 
   /// The xxl method is called when the screen size is XXL or larger.
   /// By default, it calls the xl method.
   @protected
-  Widget xxl(BuildContext context, BoxConstraints constraints) =>
-      xl(context, constraints);
+  Widget xxl(BuildContext context) => xl(context);
 }
