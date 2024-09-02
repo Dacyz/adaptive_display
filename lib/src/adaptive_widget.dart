@@ -25,6 +25,8 @@ abstract class AdaptiveWidget extends Widget {
   @protected
   Widget build(BuildContext context);
 
+  AdaptiveSettings get settings => Adaptive.settings;
+
   /// Evaluates the widget based on the [BoxConstraints].
   ///
   /// Returns the widget that matches the current [BoxConstraints]

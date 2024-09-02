@@ -8,6 +8,8 @@ abstract class AdaptiveWrapState<T extends StatefulWidget> extends State<T> {
   @override
   Widget build(BuildContext context) => adaptive;
 
+  AdaptiveSettings get settings => Adaptive.settings;
+
   /// Evaluates the widget based on the [BoxConstraints].
   ///
   /// Returns the widget that matches the current [BoxConstraints]

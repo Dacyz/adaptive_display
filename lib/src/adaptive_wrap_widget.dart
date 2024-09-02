@@ -13,6 +13,8 @@ abstract class AdaptiveWrapWidget extends Widget {
   /// the xs method becomes mandatory and is the first method to be called.
   Widget build(BuildContext context) => adaptive;
 
+  AdaptiveSettings get settings => Adaptive.settings;
+
   /// Evaluates the widget based on the [BoxConstraints].
   ///
   /// Returns the widget that matches the current [BoxConstraints]

@@ -31,27 +31,32 @@ class _StatefulAdaptiveState extends AdaptiveWrapState<StatefulAdaptive> {
 
   @override
   Widget xs(BuildContext context) {
-    return _textAndButton('$someValue!', () => setState(() => someValue = 'XS'));
+    return _textAndButton(
+        '$someValue!', () => setState(() => someValue = 'XS'));
   }
 
   @override
   Widget sm(BuildContext context) {
-    return _textAndButton('$someValue!', () => setState(() => someValue = 'SM'));
+    return _textAndButton(
+        '$someValue!', () => setState(() => someValue = 'SM'));
   }
 
   @override
   Widget md(BuildContext context) {
-    return _textAndButton('$someValue!', () => setState(() => someValue = 'MD'));
+    return _textAndButton(
+        '$someValue!', () => setState(() => someValue = 'MD'));
   }
 
   @override
   Widget lg(BuildContext context) {
-    return _textAndButton('$someValue!', () => setState(() => someValue = 'LG'));
+    return _textAndButton(
+        '$someValue!', () => setState(() => someValue = 'LG'));
   }
 
   @override
   Widget xl(BuildContext context) {
-    return _textAndButton('$someValue!', () => setState(() => someValue = 'XL'));
+    return _textAndButton(
+        '$someValue!', () => setState(() => someValue = 'XL'));
   }
 
   Widget _textAndButton(String text, void Function() onTap) {

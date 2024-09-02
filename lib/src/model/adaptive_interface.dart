@@ -1,6 +1,6 @@
 part of '../../core/adaptive.dart';
 
-// i don't use it for make it not obligatory to implement 
+// i don't use it for make it not obligatory to implement
 // all the methods on your widgets.
 
 // abstract interface class IAdaptiveConstraints<T extends Widget> {
