@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Fix main example
+
 ## 0.0.2
 
 * Added getter for Adaptive settings in adaptive widgets.

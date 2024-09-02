@@ -19,8 +19,9 @@ class SelectorPage extends AdaptiveWrapWidget {
         title: const Text('Adaptive Display Widgets'),
       ),
       body: Center(
-          /// ⬇ Here our [adaptive] Widget
-          child: adaptive),
+        /// ⬇ Here our [adaptive] Widget
+        child: adaptive,
+      ),
     );
   }
 
@@ -58,8 +59,8 @@ class SelectorPage extends AdaptiveWrapWidget {
     );
   }
 
-  // The Builders from sm onwards are all optional 
-  // and if they are not defined they will take 
+  // The Builders from sm onwards are all optional
+  // and if they are not defined they will take
   // the value of their predecessor builder
   @override
   Widget md(BuildContext context, BoxConstraints constraints) {
