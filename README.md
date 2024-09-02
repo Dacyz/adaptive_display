@@ -2,6 +2,8 @@
 
 A wrapper around BoxConstraints to make it more controlled, less indentable and reusable.
 
+![short-gif-adaptive-display](https://github.com/user-attachments/assets/4af2d14f-14fe-42b0-9241-d5fc16bf78e9)
+
 ## Features
 
 Use this plugin in your Flutter project to:
@@ -58,27 +60,27 @@ For **Wrap Builders** our build method wraps all the content, so you should defi
 When you instantiate any of these widgets, you get **five optional builders** that are expected to build your view in cascade.
 
 ```dart
-^  @override
-│  Widget xs(BuildContext context) { ... }
+^ @override
+│ Widget xs(BuildContext context) { ... }
 │
-│  @override
-│  Widget sm(BuildContext context) { ... }
+│ @override
+│ Widget sm(BuildContext context) { ... }
 │
-│  @override
-│  Widget md(BuildContext context) { ... }
+│ @override
+│ Widget md(BuildContext context) { ... }
 │
-│  @override
-│  Widget lg(BuildContext context) { ... }
+│ @override
+│ Widget lg(BuildContext context) { ... }
 │
-│  @override
-│  Widget xl(BuildContext context) { ... }
+│ @override
+│ Widget xl(BuildContext context) { ... }
 ```
 
 > Note: With `AdaptiveWidget` and `AdaptiveWrapWidget` you have access to constrains values 🤗
 >
 > ```dart
->  ^  @override
->  │  Widget xs(BuildContext context, BoxConstraints constraints) { ... }
+> @override
+> Widget xs(BuildContext context, BoxConstraints constraints) { ... }
 > ```
 
 ### Adaptive Wrap State for Stateful Widget
@@ -184,7 +186,7 @@ In this package the default values are:
 
 | Size     | Width |
 | -------- | ------- |
-| Extra small (xs) | 480.0 px |
+| Extra small (xs) | 480 px |
 | Small (sm) | 768 px |
 | Medium (md) | 1024 px |
 | Large (lg) | 1440 px |
